@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>drug-intel 可视化报告 · 设计参考 / 配色板</title>
+<style>
+/* 这是"设计参考"页：展示 build_report.py 用到的配色与组件骨架。
+   真正的报告由 scripts/build_report.py 从 JSON 生成（CSS 内嵌于该脚本）。
+   想微调配色/版式，改这里看效果，再把对应值同步到 build_report.py 的 CSS 常量；
+   也可结合 frontend-design 等 skill 做更精细的版式。 */
+:root{
+  --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+  --official:#1e3a8a; --db:#15803d; --web:#0e7490; --weak:#b45309; --red:#b91c1c; --na:#6b7280;
+}
+body{font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  color:var(--ink); background:#f1f5f9; padding:24px; line-height:1.55;}
+.report{max-width:1040px;margin:0 auto;background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:30px 34px;}
+h1{font-size:22px;margin:0 0 4px;} h2{font-size:17px;border-bottom:2px solid var(--line);padding-bottom:6px;margin:26px 0 12px;}
+.chip{display:inline-block;font-size:11px;font-weight:700;color:#fff;padding:1.5px 8px;border-radius:999px;margin:2px;}
+.b-official{background:var(--official);}.b-db{background:var(--db);}.b-web{background:var(--web);}
+.b-weak{background:var(--weak);}.b-red{background:var(--red);}.b-na{background:var(--na);}
+.note{color:var(--muted);font-size:12.5px;}
+table{border-collapse:collapse;width:100%;font-size:13.5px;margin-top:8px;}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;}
+th{background:#f1f5f9;}
+.lane-us{display:inline-block;width:14px;height:14px;background:#2563eb;border-radius:3px;vertical-align:middle;}
+.lane-cn{display:inline-block;width:14px;height:14px;background:#dc2626;border-radius:3px;vertical-align:middle;}
+.checklist{border:2px solid #fecaca;background:#fff5f5;border-radius:12px;padding:14px 16px;margin-top:24px;}
+.checklist h2{border-bottom-color:#fecaca;color:#991b1b;}
+.bar{display:inline-block;width:46px;background:#dc2626;border:1px solid #991b1b;vertical-align:bottom;margin-right:8px;}
+.bar.fc{background:repeating-linear-gradient(45deg,#fff,#fff 3px,#cbd5e1 3px,#cbd5e1 6px);border-color:#9ca3af;}
+</style></head>
+<body><main class="report">
+  <h1>drug-intel · 可视化报告设计参考</h1>
+  <p class="note">本页仅作配色 / 组件骨架参考；正式报告由 <code>scripts/build_report.py &lt;data.json&gt;</code> 生成。</p>
+
+  <h2>① 徽标 chip 配色（颜色层级要一眼可分）</h2>
+  <span class="chip b-official">🏛️官方</span> 最高可信·仅客观事实（深蓝）
+  <span class="chip b-db">✅库</span> 数据库可核（绿）
+  <span class="chip b-web">🔍web</span> 联网附链接（青）<br>
+  <span class="chip b-weak">⚠️存疑</span> 弱源（琥珀）
+  <span class="chip b-red">🔴必核</span> 高幻觉/必核（红）
+  <span class="chip b-na">❓N/A</span> 查过未找到（灰）
+  <p class="note">一个字段可叠多个：销售额 = <span class="chip b-official">🏛️官方</span><span class="chip b-red">🔴必核</span>（来源硬，但仍强制人工核）。</p>
+
+  <h2>② 时间线（双泳道）</h2>
+  <p><span class="lane-us"></span> 🇺🇸 美国（蓝） &nbsp;&nbsp; <span class="lane-cn"></span> 🇨🇳 中国（红） — 里程碑点颜色 = 该条徽标色。</p>
+
+  <h2>③ 适应症矩阵</h2>
+  <table><thead><tr><th>适应症</th><th>🇺🇸 美国</th><th>🇨🇳 中国</th></tr></thead>
+  <tbody><tr><td>HER2+ 乳腺癌</td><td>已上市 <span class="chip b-official">🏛️官方</span></td>
+  <td>已上市 <span class="chip b-official">🏛️官方</span><span class="chip b-red">🔴必核</span></td></tr></tbody></table>
+
+  <h2>④ 销售趋势（柱状；预测=斜纹；红点=强制核对）</h2>
+  <div style="height:90px"><span class="bar" style="height:40px"></span><span class="bar" style="height:62px"></span><span class="bar fc" style="height:78px"></span></div>
+  <p class="note">实色=已入账，斜纹=预测/forecast。</p>
+
+  <div class="checklist">
+    <h2>🔴 需人工核对清单（红色高亮区块 · 最关键产出，永不弱化）</h2>
+    <table><thead><tr><th>#</th><th>字段</th><th>当前值</th><th>为什么核</th><th>去哪核</th></tr></thead>
+    <tbody><tr><td>1</td><td>年销售额</td><td>$X <span class="chip b-red">🔴必核</span></td><td>财报口径易误读</td><td>公司年报</td></tr></tbody></table>
+  </div>
+</main></body></html>

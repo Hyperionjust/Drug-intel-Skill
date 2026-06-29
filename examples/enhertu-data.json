@@ -1,0 +1,601 @@
+{
+  "meta": {
+    "inn": "Trastuzumab deruxtecan / 德曲妥珠单抗",
+    "cn_name": "德曲妥珠单抗",
+    "brand_us": "ENHERTU (fam-trastuzumab deruxtecan-nxki)",
+    "brand_cn": "优赫得",
+    "codes": [
+      "T-DXd",
+      "DS-8201",
+      "DS-8201a"
+    ],
+    "mode": "按适应症逐个列",
+    "generated": "2026-06-30",
+    "script_cmd": "fetch_drug_data.py \"trastuzumab deruxtecan\" --max-studies 250",
+    "skipped_gates": true,
+    "footer": "drug-intel 演示报告 · 仅供研发情报参考，非医疗/投资建议 · 中国侧与销售额/核心优势均强制 🔴，请以 NMPA / 公司财报 / FDA 说明书人工复核。"
+  },
+  "identity": [
+    {
+      "field": "INN / 通用名",
+      "value": "Trastuzumab deruxtecan（德曲妥珠单抗）",
+      "badge": [
+        "db",
+        "official"
+      ]
+    },
+    {
+      "field": "美国商品名",
+      "value": "ENHERTU（fam-trastuzumab deruxtecan-nxki）",
+      "badge": "official"
+    },
+    {
+      "field": "中国商品名",
+      "value": "优赫得",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "field": "研究代号",
+      "value": "T-DXd / DS-8201 / DS-8201a",
+      "badge": "db"
+    },
+    {
+      "field": "类型",
+      "value": "靶向 HER2 的抗体药物偶联物（ADC）· 生物药（BLA）",
+      "badge": "official"
+    },
+    {
+      "field": "PubChem CID",
+      "value": "❓N/A — 生物药，PubChem 化合物库无小分子记录（已查 PubChem name→cid）",
+      "badge": "na"
+    },
+    {
+      "field": "ClinicalTrials.gov",
+      "value": "按 intervention 检索命中 215 条试验（含中国多中心）",
+      "badge": "db"
+    },
+    {
+      "field": "结构组成",
+      "value": "曲妥珠单抗(抗 HER2 mAb) + 可裂解四肽连接子 + 拓扑异构酶 I 抑制剂载荷 DXd（依沙替康衍生物）",
+      "badge": "official"
+    }
+  ],
+  "companies": {
+    "us": {
+      "originator": {
+        "value": "第一三共 Daiichi Sankyo（日本）",
+        "badge": "official"
+      },
+      "holder": {
+        "value": "BLA 持有人 Daiichi Sankyo；与 AstraZeneca 全球共同开发/商业化（2019 年合作）",
+        "badge": "official"
+      }
+    },
+    "china": {
+      "originator": {
+        "value": "第一三共 Daiichi Sankyo",
+        "badge": "official"
+      },
+      "holder": {
+        "value": "优赫得经 AstraZeneca 中国 / Daiichi 渠道上市（具体上市许可持有人须到 NMPA 核对）",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    }
+  },
+  "moa": [
+    {
+      "label": "机制",
+      "text": "靶向 HER2 的抗体药物偶联物：抗 HER2 抗体(曲妥珠单抗)结合 HER2 阳性肿瘤细胞后内吞，可裂解连接子在胞内释放拓扑异构酶 I 抑制剂载荷 DXd，导致 DNA 损伤与凋亡；载荷可穿膜产生'旁观者效应'，对邻近低表达细胞亦有杀伤。",
+      "badge": "official"
+    },
+    {
+      "label": "靶点",
+      "text": "HER2（ERBB2）；药抗比 DAR≈8",
+      "badge": [
+        "official",
+        "db"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2019-12-20",
+      "region": "US",
+      "label": "HER2+ 转移性乳腺癌 3L+（加速批准）",
+      "trial": "DESTINY-Breast01",
+      "badge": "official"
+    },
+    {
+      "date": "2021-01-15",
+      "region": "US",
+      "label": "HER2+ 胃/GEJ 腺癌 2L",
+      "trial": "DESTINY-Gastric01",
+      "badge": "official"
+    },
+    {
+      "date": "2022-05-04",
+      "region": "US",
+      "label": "HER2+ 转移性乳腺癌 2L（转常规批准）",
+      "trial": "DESTINY-Breast03",
+      "badge": "official"
+    },
+    {
+      "date": "2022-08-05",
+      "region": "US",
+      "label": "HER2-low 转移性乳腺癌（首个）",
+      "trial": "DESTINY-Breast04",
+      "badge": "official"
+    },
+    {
+      "date": "2022-08-11",
+      "region": "US",
+      "label": "HER2 突变 NSCLC（加速）",
+      "trial": "DESTINY-Lung02",
+      "badge": "official"
+    },
+    {
+      "date": "2024-04-05",
+      "region": "US",
+      "label": "泛实体瘤 HER2+ IHC3+（加速）",
+      "trial": "DESTINY-PanTumor02",
+      "badge": "official"
+    },
+    {
+      "date": "2025-01-27",
+      "region": "US",
+      "label": "HR+ HER2-low/ultralow 乳腺癌（内分泌后）",
+      "trial": "DESTINY-Breast06",
+      "badge": "official"
+    },
+    {
+      "date": "2025-12-15",
+      "region": "US",
+      "label": "1L HER2+ 乳腺癌 +帕妥珠单抗",
+      "trial": "DESTINY-Breast09",
+      "badge": "official"
+    },
+    {
+      "date": "2026-05-15",
+      "region": "US",
+      "label": "HER2+ 早期乳腺癌（新辅助/辅助）",
+      "trial": "DESTINY-Breast05/11",
+      "badge": "official"
+    },
+    {
+      "date": "2023-02-24",
+      "region": "China",
+      "label": "HER2+ 转移性乳腺癌（中国首个适应症）",
+      "trial": "DESTINY-Breast 系列",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "date": "2023-11-30",
+      "region": "China",
+      "label": "HER2-low 转移性乳腺癌（日期待核）",
+      "trial": "DESTINY-Breast04",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "date": "2024-08-13",
+      "region": "China",
+      "label": "HER2+ 胃/GEJ 腺癌",
+      "trial": "DESTINY-Gastric 系列",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "date": "2024-11-30",
+      "region": "China",
+      "label": "HER2 突变 NSCLC（日期待核）",
+      "trial": "DESTINY-Lung",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "date": "2026-01-22",
+      "region": "China",
+      "label": "新增适应症（胃癌 2L 等）",
+      "trial": "DESTINY-Gastric04",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    }
+  ],
+  "indications": [
+    {
+      "indication": "HER2+ 转移性乳腺癌（2L/3L）",
+      "us": {
+        "status": "已上市",
+        "trial": "DESTINY-Breast01(加速2019)→Breast03(常规2022)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "已上市",
+        "trial": "2023-02（首个适应症）",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    },
+    {
+      "indication": "HR+ HER2-low / HER2-ultralow 乳腺癌",
+      "us": {
+        "status": "已上市",
+        "trial": "DESTINY-Breast04(2022) / Breast06(2025)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "已上市（HER2-low）",
+        "trial": "2023（日期待核）",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    },
+    {
+      "indication": "1L HER2+ 转移性乳腺癌（+帕妥珠单抗）",
+      "us": {
+        "status": "已上市",
+        "trial": "DESTINY-Breast09(2025-12)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "❓ 未见获批（在研）",
+        "trial": "—",
+        "badge": "na"
+      }
+    },
+    {
+      "indication": "HER2+ 早期乳腺癌（新辅助/辅助）",
+      "us": {
+        "status": "已上市",
+        "trial": "DESTINY-Breast05/11(2026-05)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "❓ 未见获批（在研）",
+        "trial": "—",
+        "badge": "na"
+      }
+    },
+    {
+      "indication": "HER2+ 胃 / 胃食管结合部腺癌",
+      "us": {
+        "status": "已上市",
+        "trial": "DESTINY-Gastric01(2021)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "已上市",
+        "trial": "2024（DESTINY-Gastric 系列）",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    },
+    {
+      "indication": "HER2 突变非小细胞肺癌（NSCLC）",
+      "us": {
+        "status": "已上市（加速）",
+        "trial": "DESTINY-Lung02(2022)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "已上市",
+        "trial": "2024（日期待核）",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    },
+    {
+      "indication": "泛实体瘤 HER2+（IHC3+）",
+      "us": {
+        "status": "已上市（加速）",
+        "trial": "DESTINY-PanTumor02(2024)",
+        "badge": "official"
+      },
+      "china": {
+        "status": "❓ 未见获批（在研）",
+        "trial": "—",
+        "badge": "na"
+      }
+    }
+  ],
+  "intro": [
+    {
+      "text": "Enhertu/优赫得是第一三共与 AstraZeneca 合作的靶向 HER2 抗体药物偶联物(ADC)，是近年 HER2 领域增长最快的旗舰产品之一，已从 HER2+ 乳腺癌后线扩展到 HER2-low 乳腺癌、胃癌、HER2 突变 NSCLC 乃至泛实体瘤，并向一线及早期乳腺癌推进。",
+      "badge": "official"
+    },
+    {
+      "text": "已知重点安全性信号：间质性肺病/肺炎（ILD），需主动监测——属客观安全性事实，可核对 FDA 说明书。",
+      "badge": "official"
+    }
+  ],
+  "sales": {
+    "unit": "十亿美元（Enhertu 全球合并销售额，Daiichi Sankyo + AstraZeneca 合计）",
+    "source": "🔍web Daiichi Sankyo FY2024 业绩 / FiercePharma 报道（FY2024 ≈ $3,754M，FY2023 ≈ $2,566M；FY2025 公司指引 ¥662B ≈ $4.6B）。🔴 财务口径须以公司年报原文核对。",
+    "points": [
+      {
+        "year": "2022",
+        "value": 1.2,
+        "note": "约·口径待核"
+      },
+      {
+        "year": "2023",
+        "value": 2.566
+      },
+      {
+        "year": "2024",
+        "value": 3.754
+      },
+      {
+        "year": "2025",
+        "value": 4.6,
+        "forecast": true
+      }
+    ]
+  },
+  "loe": [
+    {
+      "label": "🇺🇸 美国",
+      "text": "生物药(BLA)，无现成'到期=某日'。参考产品 12 年独占期自 2019-12 起算 → 约 2031-12 生物类似药最早可入；相关美国专利 US 9,808,537 / 10,155,821 / 10,195,288（已申请专利期延长 PTE，见 Federal Register）；二手分析估计美国专利保护约延至 2033（部分报道 2033–2035）。整体为推算，强制 🔴。",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "🇨🇳 中国",
+      "text": "无 Orange Book 等价干净库；专利/独占须到『中国上市药品专利信息登记平台』(zldj.cnipa.gov.cn) 与行业库逐项推算。强制 🔴 / 须人工核。",
+      "badge": "redflag"
+    }
+  ],
+  "generics": [
+    {
+      "label": "🇺🇸 美国",
+      "text": "暂无生物类似药获批（在专利/独占期内）；FDA Purple Book 未见 trastuzumab deruxtecan 的 biosimilar。",
+      "badge": "official"
+    },
+    {
+      "label": "🇨🇳 中国",
+      "text": "暂未见同品种生物类似药获批；须到 NMPA 核对。",
+      "badge": "redflag"
+    }
+  ],
+  "peers": [
+    {
+      "label": "同类（HER2 ADC）",
+      "text": "恩美曲妥珠单抗 T-DM1 / Kadcyla（罗氏）、维迪西妥单抗 RC48 / disitamab vedotin（荣昌生物，中国已上市）、trastuzumab duocarmazine SYD985（Byondis）",
+      "badge": "web"
+    },
+    {
+      "label": "同适应症（HER2+ 乳腺癌等）竞品",
+      "text": "曲妥珠单抗+帕妥珠单抗、图卡替尼 tucatinib、奈拉替尼 neratinib、拉帕替尼、margetuximab",
+      "badge": "web"
+    }
+  ],
+  "advantages": [
+    {
+      "text": "vs 上一代 HER2 ADC（T-DM1）：更高药抗比(DAR≈8)与旁观者效应，且在 HER2-low 人群亦有效，显著扩展了可治疗群体。",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "text": "vs 同适应症方案：多项 DESTINY 头对头试验显示 PFS/OS 获益（如 DESTINY-Breast03 优于 T-DM1）；但需权衡 ILD/间质性肺病风险。",
+      "badge": [
+        "web",
+        "redflag"
+      ]
+    },
+    {
+      "text": "商业层面：适应症扩张极快，数年内覆盖乳腺/胃/肺/泛瘤种——'领先'属方向性判断，含 🏛️官方批准事实但比较结论仍须复核。",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "field": "步4 各适应症 pivotal 试验编号",
+      "value": "DESTINY-Breast01/03/04/06/09, -Gastric01, -Lung02, -PanTumor02 等",
+      "badge": "redflag",
+      "why": "CT.gov 无 'pivotal' 字段；'是否上市依据'须从 FDA 说明书反查",
+      "where": "FDA 说明书 Clinical Studies 段 / CDE 上市依据"
+    },
+    {
+      "field": "步5 历年销售额",
+      "value": "2023≈$2.566B / 2024≈$3.754B / 2025 指引≈$4.6B",
+      "badge": [
+        "official",
+        "redflag"
+      ],
+      "why": "财报级，口径(合并/地区/币种)易误读、易过期；官方源也不解除 🔴",
+      "where": "Daiichi Sankyo / AstraZeneca 年报·季报原文"
+    },
+    {
+      "field": "步5 2022 销售额",
+      "value": "≈$1.2B（口径待核）",
+      "badge": "redflag",
+      "why": "早年口径未逐条核对",
+      "where": "公司年报"
+    },
+    {
+      "field": "步6 美国 LOE",
+      "value": "≈2031-12（生物类似药独占）/ 专利约 2033",
+      "badge": [
+        "official",
+        "redflag"
+      ],
+      "why": "无现成到期日，须综合独占期+专利推算；含二手来源",
+      "where": "FDA Purple Book + 专利局 / Federal Register"
+    },
+    {
+      "field": "步6 中国 LOE",
+      "value": "❓需推算",
+      "badge": "redflag",
+      "why": "无干净库",
+      "where": "中国上市药品专利信息登记平台 zldj.cnipa.gov.cn"
+    },
+    {
+      "field": "步7 中国仿制/生物类似药",
+      "value": "暂未见获批",
+      "badge": "redflag",
+      "why": "无干净 API",
+      "where": "NMPA / CDE"
+    },
+    {
+      "field": "步2/4 中国上市持有人 + 各适应症批准日期",
+      "value": "优赫得（2023起多适应症）",
+      "badge": [
+        "official",
+        "redflag"
+      ],
+      "why": "本报告中国日期为新闻稿口径；chinadrugtrials/NMPA 无 API",
+      "where": "chinadrugtrials.org.cn / NMPA"
+    },
+    {
+      "field": "步4 中国 HER2-low/NSCLC 批准月份",
+      "value": "2023-11 / 2024（标注'待核'）",
+      "badge": "redflag",
+      "why": "确切月份未经官方逐条确认",
+      "where": "NMPA 批件库"
+    },
+    {
+      "field": "步9 核心优势全节",
+      "value": "AI 主观归纳",
+      "badge": "redflag",
+      "why": "跨试验比较统计上不严谨；官网比较属宣传立场",
+      "where": "领域专家 + 原始试验数据复核"
+    },
+    {
+      "field": "身份 PubChem CID",
+      "value": "❓N/A（生物药）",
+      "badge": "na",
+      "why": "已查 PubChem 化合物库无记录，属正常",
+      "where": "（生物药结构见 FDA/文献，非 PubChem）"
+    }
+  ],
+  "references": [
+    {
+      "label": "FDA — Enhertu 首次美国批准（HER2+ 转移性乳腺癌, 2019-12）",
+      "url": "https://www.astrazeneca.com/media-centre/press-releases/2019/enhertu-trastuzumab-deruxtecan-approved-in-the-us-for-her2-positive-unresectable-or-metastatic-breast-cancer-following-2-or-more-prior-anti-her2-based-regimens.html",
+      "badge": "official"
+    },
+    {
+      "label": "FDA — DESTINY-Breast03 转常规批准（HER2+ 乳腺癌 2L）",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-regular-approval-fam-trastuzumab-deruxtecan-nxki-breast-cancer",
+      "badge": "official"
+    },
+    {
+      "label": "FDA — 泛实体瘤 HER2+ IHC3+ 加速批准（2024-04）",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-fam-trastuzumab-deruxtecan-nxki-unresectable-or-metastatic-her2",
+      "badge": "official"
+    },
+    {
+      "label": "FDA — HR+ HER2-low/ultralow 乳腺癌（2025-01）",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-fam-trastuzumab-deruxtecan-nxki-unresectable-or-metastatic-hr-positive-her2-low-or-her2",
+      "badge": "official"
+    },
+    {
+      "label": "FDA — +帕妥珠单抗 1L HER2+ 乳腺癌（2025-12）",
+      "url": "https://www.fda.gov/drugs/drug-approvals-and-databases/fda-approves-fam-trastuzumab-deruxtecan-nxki-pertuzumab-unresectable-or-metastatic-her2-positive",
+      "badge": "official"
+    },
+    {
+      "label": "FDA — HER2+ 早期乳腺癌 新辅助/辅助（2026-05）",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-two-separate-indications-fam-trastuzumab-deruxtecan-nxki-her2-positive-early-stage",
+      "badge": "official"
+    },
+    {
+      "label": "AstraZeneca — Enhertu 中国胃癌获批（2024）",
+      "url": "https://www.astrazeneca.com/media-centre/press-releases/2024/enhertu-approved-in-china-for-patients-with-previously-treated-her2-positive-advanced-or-metastatic-gastric-cancer.html",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "AstraZeneca — Enhertu 中国 HER2-low 乳腺癌获批（2023）",
+      "url": "https://www.astrazeneca.com/media-centre/press-releases/2023/enhertu-approved-in-china-as-the-first-her2-directed-therapy-for-patients-with-her2-low-metastatic-breast-cancer.html",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "AstraZeneca — Enhertu 中国 HER2 突变 NSCLC 获批（2024）",
+      "url": "https://www.astrazeneca.com/media-centre/press-releases/2024/enhertu-approved-in-china-as-the-first-her2-directe-therapy-for-patients-with-her2-mutant-metastatic-non-small-cell-lung-cancer.html",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "Daiichi Sankyo — 中国首个适应症 HER2+ 乳腺癌（2023-02 新闻稿 PDF）",
+      "url": "https://www.daiichisankyo.com/files/news/pressrelease/pdf/202302/20230224_E2.pdf",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "Daiichi Sankyo — 中国新增适应症（2026-01 新闻稿 PDF）",
+      "url": "https://www.daiichisankyo.com/files/news/pressrelease/pdf/202601/20260122_E2.pdf",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "Daiichi Sankyo — FY2024 业绩（Enhertu 合并销售额）",
+      "url": "https://www.daiichisankyo.com/files/investors/library/quarterly_result/2024/4Q/FY2024Q4_Financial_Results_Presentation_E.pdf",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "Federal Register — ENHERTU 专利期延长（US 9,808,537 / 10,155,821 / 10,195,288）",
+      "url": "https://www.federalregister.gov/documents/2021/11/01/2021-23725/determination-of-regulatory-review-period-for-purposes-of-patent-extension-enhertu",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "ClinicalTrials.gov — trastuzumab deruxtecan 试验检索（DESTINY 系列，215 条）",
+      "url": "https://clinicaltrials.gov/search?intr=trastuzumab%20deruxtecan",
+      "badge": "db"
+    },
+    {
+      "label": "DrugPatentWatch — ENHERTU 专利/生物类似药（二手聚合，仅供参考）",
+      "url": "https://www.drugpatentwatch.com/p/biologics/tradename/ENHERTU",
+      "badge": "weak"
+    }
+  ]
+}

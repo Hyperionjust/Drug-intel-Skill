@@ -1,0 +1,208 @@
+{
+  "_about": "drug-intel 可视化报告的数据契约。scripts/build_report.py 读取本结构 -> 自包含 HTML。",
+  "_badge_keys": "每个 badge 可为单个字符串或数组。可选值：official(🏛️官方·仅事实) | db(✅库) | web(🔍web) | weak(⚠️) | redflag(🔴必核) | na(❓N/A)。销售额/核心优势等即使来自官方也要带 redflag，例：[\"official\",\"redflag\"]。",
+  "_rule": "查不到 -> na；绝不编造。中国侧每条默认带 redflag。末尾 checklist 必填且收齐所有 red/weak/na。",
+  "meta": {
+    "inn": "INN / 通用名（必填）",
+    "cn_name": "中文名",
+    "brand_us": "美国商品名",
+    "brand_cn": "中国商品名",
+    "codes": [
+      "研究代号1",
+      "研究代号2"
+    ],
+    "mode": "最高进度 | 按适应症逐个列",
+    "generated": "YYYY-MM-DD",
+    "script_cmd": "fetch_drug_data.py \"<药名>\" --max-studies 250",
+    "skipped_gates": "true=用户选了'一次跑完'，报告顶部会显示未确认横幅",
+    "footer": "页脚一句话（可选）"
+  },
+  "identity": [
+    {
+      "field": "INN / 通用名",
+      "value": "...",
+      "badge": [
+        "db",
+        "official"
+      ]
+    },
+    {
+      "field": "PubChem CID",
+      "value": "❓N/A — 生物药无小分子记录（已查 PubChem）",
+      "badge": "na"
+    }
+  ],
+  "companies": {
+    "us": {
+      "originator": {
+        "value": "原研公司",
+        "badge": "official"
+      },
+      "holder": {
+        "value": "权利人/上市持有人",
+        "badge": "official"
+      }
+    },
+    "china": {
+      "originator": {
+        "value": "原研公司",
+        "badge": "official"
+      },
+      "holder": {
+        "value": "上市持有人（须 NMPA 核）",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    }
+  },
+  "moa": [
+    {
+      "label": "机制",
+      "text": "...",
+      "badge": "official"
+    },
+    {
+      "label": "靶点",
+      "text": "...",
+      "badge": [
+        "official",
+        "db"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2019-12-20",
+      "region": "US",
+      "label": "适应症 + 简述",
+      "trial": "PIVOTAL-名",
+      "badge": "official"
+    },
+    {
+      "date": "2023-02",
+      "region": "China",
+      "label": "适应症 + 简述",
+      "trial": "...",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    }
+  ],
+  "indications": [
+    {
+      "indication": "适应症名",
+      "us": {
+        "status": "已上市 / III期 / 加速 / 未获批",
+        "trial": "pivotal",
+        "badge": "official"
+      },
+      "china": {
+        "status": "...",
+        "trial": "...",
+        "badge": [
+          "official",
+          "redflag"
+        ]
+      }
+    }
+  ],
+  "intro": [
+    {
+      "text": "客观产品定位 -> official；宣传措辞 -> web/weak",
+      "badge": "official"
+    }
+  ],
+  "sales": {
+    "unit": "十亿美元（口径说明，如合并/某公司/币种）",
+    "source": "🔍web/🏛️官方 出处（财报口径仍 🔴）",
+    "points": [
+      {
+        "year": "2023",
+        "value": 2.566
+      },
+      {
+        "year": "2024",
+        "value": 3.754
+      },
+      {
+        "year": "2025",
+        "value": 4.6,
+        "forecast": true,
+        "note": "指引/预测"
+      }
+    ]
+  },
+  "loe": [
+    {
+      "label": "🇺🇸 美国",
+      "text": "无现成到期日，列依据+专利号+独占期推算",
+      "badge": [
+        "official",
+        "redflag"
+      ]
+    },
+    {
+      "label": "🇨🇳 中国",
+      "text": "无干净库，须到登记平台推算",
+      "badge": "redflag"
+    }
+  ],
+  "generics": [
+    {
+      "label": "🇺🇸 美国",
+      "text": "是/否 + 首个获批年",
+      "badge": "official"
+    },
+    {
+      "label": "🇨🇳 中国",
+      "text": "是/否（须 NMPA 核）",
+      "badge": "redflag"
+    }
+  ],
+  "peers": [
+    {
+      "label": "同 MoA/靶点",
+      "text": "几个名字",
+      "badge": "web"
+    },
+    {
+      "label": "同适应症竞品",
+      "text": "几个名字",
+      "badge": "web"
+    }
+  ],
+  "advantages": [
+    {
+      "text": "方向性对比一条（整节 🔴）",
+      "badge": [
+        "web",
+        "redflag"
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "field": "步X 字段",
+      "value": "当前值/状态",
+      "badge": "redflag",
+      "why": "为什么要核",
+      "where": "去哪个官方源核"
+    }
+  ],
+  "references": [
+    {
+      "label": "来源标题（如 FDA 批准页 / 公司新闻稿 / 财报）",
+      "url": "https://...",
+      "badge": "official"
+    },
+    {
+      "label": "二手聚合站（仅参考）",
+      "url": "https://...",
+      "badge": "weak"
+    }
+  ],
+  "_references_note": "全文所有 source 链接统一收进 references[]，渲染为报告最后一个 section（编号 + 可点击 + 徽标）。"
+}
